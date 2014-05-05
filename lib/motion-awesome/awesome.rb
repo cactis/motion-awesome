@@ -27,6 +27,7 @@ module MotionAwesome
   def parse_options( icon, opts )    
     options        =  MotionMap::Map[opts.merge( icon: xform_icon(icon) )]
     options[:size] = UIFont.systemFontSize unless options[:size]
+    options[:color] = :white.uicolor unless options[:color]
     options
   end
 
